@@ -1,50 +1,60 @@
 import csv
 from datetime import date, timedelta
 
-start_week = 1
-end_week = 10
-beginning_of_semester_date = date(2021,7,19)
+# beginning_of_semester_date = date(2021,7,19)
 
-def date_to_string(date_offset):
-    if date_offset == 0:
-        return "today"
-    elif date_offset > 0:
-        return_string = "in " + str(date_offset) + " days"
-        return return_string
-    else:
-        return_string = str(abs(date_offset)) + " days ago"
-        return return_string
+today = date.today()
+
+this_week = 10 # The number of this week
+start_week = 10 # The week you want to start repeating from
+repeat_length = 2 # The number of weeks you want to repeat for
+
+def date_to_string(date_obj): # Function to convert a python date object into a relative Todoist date sting
+	delta = today - date_obj
+	date_offset = delta.days # timedelta object to integer
+	
+	if date_offset == 0:
+		return "today"
+	elif date_offset < 0:
+		return_string = "in " + str(abs(date_offset)) + " days"
+		return return_string
+	else:
+		return_string = str(date_offset) + " days ago"
+		return return_string
 
 with open('University_Tasks.csv', 'w', newline='') as file:
 
-    week = start_week
-
-    start_date = beginning_of_semester_date
+    # week = start_week
 
     today = date.today()
 
     weekdates = []
 
-    weekStart = start_date - timedelta(days=start_date.weekday()) # find the monday of this week
+    weekStart = today - timedelta(days=today.weekday()) # find the monday of this week
 
-    for i in range(7): # create an array of this week's dates
-        week_day = weekStart + timedelta(days=i)
-        days_to = week_day - today
-        weekdates.append(days_to.days)
+    iterationBeginning = weekStart - timedelta(weeks=(this_week - 1)) # find the monday of the first week
 
-    #weekdates = [x+7 for x in weekdates]
+    weeks = [x for x in range(this_week,this_week + repeat_length)] # create array of weeks the user wants to be iterated over
 
-    #my_string = date_to_string(weekdates[2])
+    
 
     writer = csv.writer(file)
 
-    writer.writerow(["TYPE","CONTENT","PRIORITY","INDENT","AUTHOR","RESPONSIBLE","DATE","DATE_LANG","TIMEZONE"])
+    writer.writerow(["TYPE","CONTENT","PRIORITY","INDENT","AUTHOR","RESPONSIBLE","DATE","DATE_LANG","TIMEZONE"]) # CSV rows that Todoist uses
 
-    for i in range(week,end_week):
+    for i in weeks:
         section_name = "Week " + str(i);
-        writer.writerow(["section", section_name])
-        if (i != week):
-            weekdates = [x+7 for x in weekdates]
+        writer.writerow(["section", section_name]) 
+        # if (i != week):
+        #     weekdates = [x+7 for x in weekdates]
+
+        # for j in range(7): # create an array of this week's dates
+	       #  week_day = weekStart + timedelta(days=j)
+	       #  days_to = week_day - today
+	       #  weekdates.append(days_to.days)
+       	thisMonday = iterationBeginning + timedelta(weeks=(i - 1)) # The monday of the current week
+
+       	weekdates = [thisMonday + timedelta(days=i) for i in range(7)] # Date objects for each day in this week
 
         # # ELEC1710
         offset_date = date_to_string(weekdates[0])
