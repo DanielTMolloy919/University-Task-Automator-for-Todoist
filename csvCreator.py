@@ -5,7 +5,7 @@ today = date.today()
 
 this_week = 10 # The number of this week
 start_week = 10 # The week you want to start repeating from
-repeat_length = 2 # The number of weeks you want to repeat for
+repeat_length = 1 # The number of weeks you want to repeat for
 
 def date_to_string(date_obj): # Function to convert a python date object into a relative Todoist date sting
 	delta = today - date_obj
@@ -41,7 +41,7 @@ with open('University_Tasks.csv', 'w', newline='') as file:
     for i in weeks:
         section_name = "Week " + str(i);
         writer.writerow(["section", section_name]) 
-        
+
        	thisMonday = iterationBeginning + timedelta(weeks=(i - 1)) # The monday of the current week
 
        	weekdates = [thisMonday + timedelta(days=i) for i in range(7)] # Date objects for each day in this week
