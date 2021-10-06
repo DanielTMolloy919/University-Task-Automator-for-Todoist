@@ -1,8 +1,6 @@
 import csv
 from datetime import date, timedelta
 
-# beginning_of_semester_date = date(2021,7,19)
-
 today = date.today()
 
 this_week = 10 # The number of this week
@@ -24,8 +22,6 @@ def date_to_string(date_obj): # Function to convert a python date object into a 
 
 with open('University_Tasks.csv', 'w', newline='') as file:
 
-    # week = start_week
-
     today = date.today()
 
     weekdates = []
@@ -45,13 +41,7 @@ with open('University_Tasks.csv', 'w', newline='') as file:
     for i in weeks:
         section_name = "Week " + str(i);
         writer.writerow(["section", section_name]) 
-        # if (i != week):
-        #     weekdates = [x+7 for x in weekdates]
-
-        # for j in range(7): # create an array of this week's dates
-	       #  week_day = weekStart + timedelta(days=j)
-	       #  days_to = week_day - today
-	       #  weekdates.append(days_to.days)
+        
        	thisMonday = iterationBeginning + timedelta(weeks=(i - 1)) # The monday of the current week
 
        	weekdates = [thisMonday + timedelta(days=i) for i in range(7)] # Date objects for each day in this week
