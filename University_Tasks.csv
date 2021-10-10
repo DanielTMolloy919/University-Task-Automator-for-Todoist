@@ -1,15 +1,13 @@
 TYPE,CONTENT,PRIORITY,INDENT,AUTHOR,RESPONSIBLE,DATE,DATE_LANG,TIMEZONE
-section,Week 10
-task,ELEC1710 Prepare For W10 Lab @High_Energy,2,1,stracharater (10283909),,2 days ago,en,Australia/Sydney
-task,ELEC1710 Lab W10 @High_Energy,2,1,stracharater (10283909),,1 days ago,en,Australia/Sydney
-task,ELEC1710 Lecture P1 W10 @High_Energy,2,1,stracharater (10283909),,in 2 days,en,Australia/Sydney
-task,ELEC1710 Lecture P2 W10 @High_Energy,2,1,stracharater (10283909),,in 3 days,en,Australia/Sydney
-task,ELEC1710 Tutorial 10 @High_Energy,2,1,stracharater (10283909),,in 3 days,en,Australia/Sydney
-task,ELEC2430 Lecture P1 W10 @High_Energy,2,1,stracharater (10283909),,2 days ago,en,Australia/Sydney
-task,ELEC2430 Lecture P2 W10 @High_Energy,2,1,stracharater (10283909),,today,en,Australia/Sydney
-task,ELEC2430 Lab W10 @High_Energy,2,1,stracharater (10283909),,today,en,Australia/Sydney
-task,ELEC2430 Tutorial 9 @High_Energy,2,1,stracharater (10283909),,in 2 days,en,Australia/Sydney
-task,ELEC2430 Prepare For W11 Lab @High_Energy,2,1,stracharater (10283909),,in 2 days,en,Australia/Sydney
-task,ENGG2500 Lecture W10 @High_Energy,2,1,stracharater (10283909),,1 days ago,en,Australia/Sydney
-task,ENGG2500 Lab W10 @High_Energy,2,1,stracharater (10283909),,today,en,Australia/Sydney
-task,ENGG2500 Reflective Paragraph W10 @Low_Energy,2,1,stracharater (10283909),,in 2 days,en,Australia/Sydney
+section,Week 11
+task,ELEC1710 Lab W11 @High_Energy,2,1,stracharater (10283909),,in 2 days,en,Australia/Sydney
+task,ELEC1710 Lecture P1 W11 @High_Energy,2,1,stracharater (10283909),,in 5 days,en,Australia/Sydney
+task,ELEC1710 Lecture P2 W11 @High_Energy,2,1,stracharater (10283909),,in 6 days,en,Australia/Sydney
+task,ELEC1710 Tutorial 11 @High_Energy,2,1,stracharater (10283909),,in 6 days,en,Australia/Sydney
+task,ELEC2430 Lecture P1 W11 @High_Energy,2,1,stracharater (10283909),,in 1 days,en,Australia/Sydney
+task,ELEC2430 Lecture P2 W11 @High_Energy,2,1,stracharater (10283909),,in 3 days,en,Australia/Sydney
+task,ELEC2430 Lab W11 @High_Energy,2,1,stracharater (10283909),,in 3 days,en,Australia/Sydney
+task,ELEC2430 Tutorial 10 @High_Energy,2,1,stracharater (10283909),,in 5 days,en,Australia/Sydney
+task,ENGG2500 Lecture W11 @High_Energy,2,1,stracharater (10283909),,in 2 days,en,Australia/Sydney
+task,ENGG2500 Lab W11 @High_Energy,2,1,stracharater (10283909),,in 3 days,en,Australia/Sydney
+task,ENGG2500 Reflective Paragraph W11 @Low_Energy,2,1,stracharater (10283909),,in 5 days,en,Australia/Sydney

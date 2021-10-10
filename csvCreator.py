@@ -4,7 +4,7 @@ from datetime import date, timedelta
 today = date.today()
 
 this_week = 10 # The number of this week
-start_week = 10 # The week you want to start repeating from
+start_week = 11 # The week you want to start repeating from
 repeat_length = 1 # The number of weeks you want to repeat for
 
 def date_to_string(date_obj): # Function to convert a python date object into a relative Todoist date sting
@@ -30,7 +30,7 @@ with open('University_Tasks.csv', 'w', newline='') as file:
 
     iterationBeginning = weekStart - timedelta(weeks=(this_week - 1)) # find the monday of the first week
 
-    weeks = [x for x in range(this_week,this_week + repeat_length)] # create array of weeks the user wants to be iterated over
+    weeks = [x for x in range(start_week,start_week + repeat_length)] # create array of weeks the user wants to be iterated over
 
     
 
@@ -49,7 +49,7 @@ with open('University_Tasks.csv', 'w', newline='') as file:
         # # ELEC1710
         offset_date = date_to_string(weekdates[0])
         if i < 13:
-            writer.writerow(["task", "ELEC1710 Prepare For W" + str(i) + " Lab @High_Energy", 2, 1, "stracharater (10283909)","",offset_date,"en","Australia/Sydney"])
+            # writer.writerow(["task", "ELEC1710 Prepare For W" + str(i) + " Lab @High_Energy", 2, 1, "stracharater (10283909)","",offset_date,"en","Australia/Sydney"])
             offset_date = date_to_string(weekdates[1])
             writer.writerow(["task", "ELEC1710 Lab W" + str(i) + " @High_Energy", 2, 1, "stracharater (10283909)","",offset_date,"en","Australia/Sydney"])
             offset_date = date_to_string(weekdates[4])
@@ -76,7 +76,7 @@ with open('University_Tasks.csv', 'w', newline='') as file:
             writer.writerow(["task", "ELEC2430 Lab W" + str(i) + " @High_Energy", 2, 1, "stracharater (10283909)","",offset_date,"en","Australia/Sydney"])
             offset_date = date_to_string(weekdates[4])
             writer.writerow(["task", "ELEC2430 Tutorial " + str(i - 1) + " @High_Energy", 2, 1, "stracharater (10283909)","",offset_date,"en","Australia/Sydney"])
-            writer.writerow(["task", "ELEC2430 Prepare For W" + str(i + 1) + " Lab @High_Energy", 2, 1, "stracharater (10283909)","",offset_date,"en","Australia/Sydney"])
+            # writer.writerow(["task", "ELEC2430 Prepare For W" + str(i + 1) + " Lab @High_Energy", 2, 1, "stracharater (10283909)","",offset_date,"en","Australia/Sydney"])
 
         # # ENGG2500
         offset_date = date_to_string(weekdates[1])
